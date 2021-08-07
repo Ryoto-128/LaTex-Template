@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  latex:
+    container_name: dev
+    build: 
+      context: .
+      dockerfile: ./build/dev/Dockerfile
+    volumes:
+      - ./src/workdir:/workdir
+    tty: true
